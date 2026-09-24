@@ -1,23 +1,121 @@
-Postman API Task
+Postman API Testing Task
 Overview
 
-This repository contains the Postman collection created for the assigned API testing task.
+This repository contains the Postman collection created for API testing using the JSONPlaceholder REST API.
 
-Contents
+The collection demonstrates basic CRUD operations:
 
-Postman API collection
+GET – Retrieve posts
 
-API requests and test cases
+POST – Create a new post
 
-How to Use
+PUT – Update an existing post
 
-Download the Postman collection JSON file.
+DELETE – Delete a post
 
-Import the collection into Postman.
+API Used
 
-Configure the required environment variables, if applicable.
+JSONPlaceholder API
 
-Run the collection using Postman.
+Base URL:
+
+https://jsonplaceholder.typicode.com
+
+Test Cases
+1. GET Posts
+
+Method: GET
+
+Endpoint:
+/posts
+
+Validation:
+
+Verifies that the response status code is 200
+
+Verifies that the response contains the expected post data
+
+2. POST Create Post
+
+Method: POST
+
+Endpoint:
+/posts
+
+Request Body:
+
+{
+  "title": "Postman CRUD Test",
+  "body": "Testing POST request using Postman",
+  "userId": 1
+}
+
+
+Validation:
+
+Verifies that the response status code is 201
+
+Verifies that the response contains the expected title
+
+3. PUT Update Post
+
+Method: PUT
+
+Endpoint:
+/posts/1
+
+Request Body:
+
+{
+  "id": 1,
+  "title": "Updated Post",
+  "body": "Updated using Postman",
+  "userId": 1
+}
+
+
+Validation:
+
+Verifies that the response status code is 200
+
+Verifies that the post title is updated successfully
+
+4. DELETE Post
+
+Method: DELETE
+
+Endpoint:
+/posts/1
+
+Validation:
+
+Verifies that the response status code is 200
+
+How to Run
+
+Download the Postman collection JSON file from this repository.
+
+Open Postman.
+
+Import the collection.
+
+Select the required request.
+
+Click Send to execute the request.
+
+Review the response and test results.
+
+Tools Used
+
+Postman
+
+JSONPlaceholder REST API
+
+GitHub
+
+Collection
+
+The exported Postman collection is included in this repository as a .json file.
 
 Author
 
